@@ -1,0 +1,36 @@
+.body {
+    gap: 30px;
+}
+
+.title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+summary {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #969696;
+    /*opacity: 0.5;*/
+    cursor: pointer;
+}
+summary::marker {
+    color: #FFFFFF;
+}
+
+.about_me {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about_me li {
+    color: #FFFFFF;
+}
+.about_me li::marker {
+    color: rgba(255,255,255,.3);
+}

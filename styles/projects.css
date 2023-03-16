@@ -1,0 +1,35 @@
+.projects__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.icon img {
+    width: 225px;
+}
+.title {
+    font-family: 'Manrope', sans-serif;
+    color: #FFFFFF;
+    opacity: .5;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+}
+.name {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+.description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
