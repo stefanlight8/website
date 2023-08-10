@@ -1,83 +1,411 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>STEFANLIGHT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
 
-<div class="card">
-  <section class="header-section">
-    <header class="header">
-      <svg width="59" height="13" viewBox="0 0 59 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="6.5" cy="6.5" r="6.5" fill="#FC6055"/>
-        <circle cx="6.5" cy="6.5" r="6" stroke="black" stroke-opacity="0.2"/>
-        <circle cx="29.5" cy="6.5" r="6.5" fill="#FFBC2F"/>
-        <circle cx="29.5" cy="6.5" r="6" stroke="black" stroke-opacity="0.2"/>
-        <circle cx="52.5" cy="6.5" r="6.5" fill="#28C742"/>
-        <circle cx="52.5" cy="6.5" r="6" stroke="black" stroke-opacity="0.2"/>
-      </svg>
-      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_0_12)">
-          <path d="M25 18.7517C25 20.2857 23.7562 21.5294 22.2222 21.5294H2.77778C1.24375 21.5294 0 20.2857 0 18.7517V15.9739H25V18.7517Z" fill="#CE2028"/>
-          <path d="M0 9.02612H25V15.9706H0V9.02612Z" fill="#22408C"/>
-          <path d="M22.2222 3.47388H2.77778C1.24375 3.47388 0 4.71763 0 6.25165V9.02943H25V6.25165C25 4.71763 23.7562 3.47388 22.2222 3.47388Z" fill="#EEEEEE"/>
-        </g>
-        <defs>
-          <clipPath id="clip0_0_12">
-            <rect width="25" height="25" fill="white"/>
-          </clipPath>
-        </defs>
-      </svg>
-    </header>
-  </section>
-  <section class="body-section">
-    <div class="navigation">
-      <div class="brands">
-        <div class="brand__header">
-          <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.88095 0.358488C8.6571 -0.124373 9.64166 -0.119071 10.4126 0.372121L13.9878 2.65016C15.464 3.59071 15.4493 5.74991 13.9605 6.67033L12.9098 7.31993L15.6163 9.04894C16.299 9.4851 16.7121 10.2391 16.7121 11.0489V14.3895C16.7121 15.1994 16.299 15.9533 15.6163 16.3895L8.93838 20.6556C8.15395 21.1567 7.14891 21.1535 6.36768 20.6474L2.54689 18.1723C1.13124 17.2552 1.09685 15.1966 2.48109 14.2328L3.49216 13.5289L1.09405 11.9938C0.412355 11.5574 0 10.8041 0 9.99497V6.57981C0 5.75986 0.423413 4.99797 1.1199 4.56468L7.88095 0.358488ZM4.45932 14.1411L3.08442 15.0984C2.3154 15.6339 2.3345 16.7775 3.12098 17.287L6.94176 19.7622C7.37578 20.0433 7.93413 20.0451 8.36993 19.7667L10.9265 18.1335L4.45932 14.1411ZM12.4461 17.1626L15.0478 15.5006C15.4271 15.2583 15.6566 14.8394 15.6566 14.3895V11.0489C15.6566 10.599 15.4271 10.1801 15.0478 9.93782L11.6379 7.75944L5.37329 3.83152L5.40119 7.26195C5.40486 7.7128 5.63873 8.13052 6.02126 8.36947L11.3299 11.6856C12.0243 12.1194 12.4461 12.8801 12.4461 13.6985V17.1626ZM5.83361 2.8748L11.9203 6.69117L13.4053 5.77315C14.2324 5.2618 14.2405 4.06225 13.4205 3.53972L9.84517 1.26168C9.41689 0.988795 8.86991 0.985849 8.43872 1.25411L5.83361 2.8748ZM4.31764 3.81791L4.34572 7.27053C4.35232 8.08205 4.77329 8.83395 5.46184 9.26406L10.7705 12.5802C11.1563 12.8212 11.3906 13.2438 11.3906 13.6985V17.18L4.72292 13.0639L1.66331 11.1054C1.28459 10.863 1.0555 10.4445 1.0555 9.99497V6.57981C1.0555 6.12428 1.29073 5.70101 1.67767 5.46029L4.31764 3.81791Z" fill="#b4b4b4"/>
-          </svg>
-          <h4>StefanLight</h4>
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="site-container">
+        <div class="site-site">
+          <div class="site-body">
+            <div id="aboutme" class="site-aboutme">
+              <div class="site-title">
+                <span class="site-text">
+                  <span>
+                    <span>Hello, world!</span>
+                    <br />
+                    <span>I’m stefanlight.</span>
+                  </span>
+                </span>
+                <img
+                  alt="logo3019"
+                  src="public/external/logo3019-5y4h.svg"
+                  class="site-logo"
+                />
+              </div>
+              <span class="site-text05">
+                <span>
+                  <span>
+                    My name's Stefan and I'm 15 years young. I'm a backend
+                    developer, system admin, designer, photographer, and
+                    beyond... I've been using computers for a solid 7 years now.
+                  </span>
+                  <br />
+                  <span></span>
+                  <br />
+                  <span>
+                    Python is my main programming language and I've dabbled in
+                    over 20 different flavors of Linux, mac OS (my main and
+                    first system), and all flavors of Windows since Vista.
+                  </span>
+                  <br />
+                  <span></span>
+                  <br />
+                  <span>
+                    I got my start in the design, YouTube, and streaming game
+                    back in 2018 when I started creating Minecraft-design and
+                    getting involved in all sorts of videos. Nowadays, I'm
+                    kickin' it on Twitch, dropping occasional vids, and just
+                    cranking out new content.
+                  </span>
+                  <br />
+                  <span></span>
+                  <br />
+                  <span>
+                    I'm all about projects and love getting involved in their
+                    development, so hit me up if you wanna collaborate or just
+                    shoot the breeze! Slide into my DM, noproblemo.
+                  </span>
+                  <br />
+                  <span></span>
+                  <br />
+                  <span>
+                    If you're looking to cop my services, I got you covered with
+                    pricing pronto in the DM. Let's get connected!
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div id="myprojects" class="site-myprojects">
+              <span class="site-text24"><span>My projects</span></span>
+              <div class="site-projects">
+                <div class="site-cloudmedia">
+                  <div class="site-body1">
+                    <img
+                      alt="title3061"
+                      src="public/external/title3061-sckl.svg"
+                      class="site-title01"
+                    />
+                    <span class="site-text26">
+                      <span>
+                        A free media space dedicated to different kinds of news
+                        from different authors on different topics.
+                      </span>
+                    </span>
+                  </div>
+                  <button class="site-buttonsrow">
+                    <a
+                      href="https://t.me/cl0udmedia"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="site-buttoninvite"
+                    >
+                      <span class="site-text28"><span>join</span></span>
+                    </a>
+                  </button>
+                </div>
+                <div class="site-shinshi">
+                  <div class="site-body2">
+                    <div class="site-title02">
+                      <img
+                        alt="logo3049"
+                        src="public/external/logo3049-bndv.svg"
+                        loading="eager"
+                        class="site-logo1"
+                      />
+                      <span class="site-text30"><span>Shinshi</span></span>
+                    </div>
+                    <span class="site-text32">
+                      <span>
+                        The modern and user-friendly Discord bot designed to
+                        provide you and your servers with great features and
+                        stable performance.
+                      </span>
+                    </span>
+                  </div>
+                  <button class="site-buttonsrow1">
+                    <a
+                      href="https://discord.com/oauth2/authorize?client_id=860225802716315668&amp;scope=bot+applications.commands"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="site-buttoninvite1"
+                    >
+                      <span class="site-text34"><span>invite</span></span>
+                    </a>
+                    <a
+                      href="https://dsc.gg/shinshi"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="site-buttonserver"
+                    >
+                      <span class="site-text36"><span>server</span></span>
+                    </a>
+                  </button>
+                </div>
+                <div class="site-pomice">
+                  <div class="site-body3">
+                    <div class="site-title03">
+                      <img
+                        alt="logo3069"
+                        src="public/external/logo3069-s4w.svg"
+                        class="site-logo2"
+                      />
+                      <span class="site-text38"><span>Pomice</span></span>
+                    </div>
+                    <span class="site-text40">
+                      <span>
+                        The modern Lavalink wrapper designed for disnake,
+                        discord.py, nextcord and pycord.
+                      </span>
+                    </span>
+                  </div>
+                  <button class="site-buttonsrow2">
+                    <a
+                      href="https://github.com/stefanlight8/pomice"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="site-buttongithub"
+                    >
+                      <span class="site-text42"><span>github</span></span>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="resources" class="site-portfoliolinks">
+              <span class="site-text44"><span>Resources</span></span>
+              <div class="site-body4">
+                <div class="site-linksrow">
+                  <a
+                    href="https://www.behance.net/stefanlight"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="site-link"
+                  >
+                    <div class="site-behance">
+                      <div class="site-title04">
+                        <div class="site-icon">
+                          <img
+                            alt="Subtract3061"
+                            src="public/external/subtract3061-xwk9.svg"
+                            class="site-subtract"
+                          />
+                        </div>
+                        <span class="site-text46"><span>Behance</span></span>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://vk.com/stefanlight_club"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="site-link1"
+                  >
+                    <div class="site-vk">
+                      <div class="site-title05">
+                        <div class="site-icon1">
+                          <img
+                            alt="Subtract3061"
+                            src="public/external/subtract3061-e8er.svg"
+                            class="site-subtract1"
+                          />
+                        </div>
+                        <span class="site-text48">
+                          <span>My VK group</span>
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="site-linksrow1">
+                  <a
+                    href="https://dsc.gg/shinshi"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="site-link2"
+                  >
+                    <div class="site-discord">
+                      <div class="site-title06">
+                        <div class="site-icon2">
+                          <img
+                            alt="Subtract3061"
+                            src="public/external/subtract3061-llxq.svg"
+                            class="site-subtract2"
+                          />
+                        </div>
+                        <span class="site-text50"><span>Discord</span></span>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://github.com/stefanlight8"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="site-link3"
+                  >
+                    <div class="site-github">
+                      <div class="site-title07">
+                        <div class="site-icon3">
+                          <img
+                            alt="Subtract3061"
+                            src="public/external/subtract3061-k8zd.svg"
+                            class="site-subtract3"
+                          />
+                        </div>
+                        <span class="site-text52"><span>Github</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="site-linksrow2">
+                  <a
+                    href="https://youtube.com/stefanlight"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="site-link4"
+                  >
+                    <div class="site-youtube">
+                      <div class="site-title08">
+                        <div class="site-icon4">
+                          <div class="site-youtube1">
+                            <img
+                              alt="Subtract3061"
+                              src="public/external/subtract3061-iev.svg"
+                              class="site-subtract4"
+                            />
+                          </div>
+                        </div>
+                        <span class="site-text54"><span>YouTube</span></span>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://twitch.tv/stefanlight"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="site-link5"
+                  >
+                    <div class="site-twitch">
+                      <div class="site-title09">
+                        <div class="site-icon5">
+                          <img
+                            alt="Subtract3061"
+                            src="public/external/subtract3061-sceya.svg"
+                            class="site-subtract5"
+                          />
+                        </div>
+                        <span class="site-text56"><span>Twitch</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="site-footer">
+            <div class="site-frame995">
+              <div class="site-logocredentials">
+                <div class="site-frame180">
+                  <img
+                    alt="logo3061"
+                    src="public/external/logo3061-61q.svg"
+                    class="site-logo3"
+                  />
+                  <div class="site-title10">
+                    <span class="site-text58"><span>stefanlight</span></span>
+                    <span class="site-text60"><span>Stefan Mukhin</span></span>
+                  </div>
+                </div>
+              </div>
+              <span class="site-text62">https://stefanlight.ru/</span>
+            </div>
+            <div class="site-frame1801">
+              <span class="site-text63"><span>Paragraphs</span></span>
+              <a href="#aboutme" class="site-text65"><span>About me</span></a>
+              <a href="#myprojects" class="site-text67">
+                <span>Projects</span>
+              </a>
+              <a href="#resources" class="site-text69">
+                <span>Resources</span>
+              </a>
+            </div>
+            <div class="site-frame996">
+              <span class="site-text71"><span>Other links</span></span>
+              <a
+                href="https://dsc.gg/shinshi"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="site-text73"
+              >
+                <span>Shinshi</span>
+              </a>
+              <a
+                href="https://t.me/stefanlight_blog"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="site-text75"
+              >
+                <span>Blog</span>
+              </a>
+              <a
+                href="https://t.me/cl0udmedia"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="site-text77"
+              >
+                <span>CloudMedia</span>
+              </a>
+            </div>
+            <div class="site-frame997">
+              <span class="site-text79"><span>Authors</span></span>
+              <a
+                href="https://stefanlight.ru/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="site-text81"
+              >
+                <span>Designed by stefanlight.</span>
+              </a>
+              <a
+                href="https://teleporthq.io/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="site-text83"
+              >
+                Developed by TeleportHQ.
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="brand__title">
-          <h1>StefanLight</h1>
-        </div>
-      </div>
-      <nav class="nav">
-        <div class="items">
-          <a href="index.html" class="item active">Главная</a>
-          <a href="about.html" class="item">Обо мне</a>
-          <a href="projects.html" class="item">Проекты</a>
-          <a href="portfolio.html" class="item">Портфолио</a>
-        </div>
-      </nav>
-      <div class="developers">
-        <p>Designed by stefanlight</p>
-        <p>Developed by “GIRL OR BOY”</p>
       </div>
     </div>
-    <div class="body">
-      <div class="message">
-        <img src="images/avatar.png" alt="">
-        <div class="container">
-          <div class="author">stefanlight</div>
-          <div class="content">Начинающий компьютерный гений, разносторонний человек с множеством увлечений.</div>
-        </div>
-      </div>
-      <div class="code__card">
-        <div class="lines">
-          <p>1</p>
-          <p>2</p>
-        </div>
-        <div class="code"><span style="color: #E42251">print</span><span style="color: #FFFFFF">(</span><span style="color: #EAE193">‘ Вас приветствовать на одном из ресурсов! Меня зовут Стефан и мне 14 лет,’ ‘17 апреля уже исполниться 15. Больше инфромации на странице “обо мне”’</span><span style="color: #FFFFFF">)</span></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-</body>
+  </body>
 </html>
