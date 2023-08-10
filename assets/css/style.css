@@ -1,0 +1,388 @@
+:root {
+    --font-size: 16px;
+    --font-weight: 400;
+    --font-family: 'Azeret Mono';
+
+    --text-color: #F1F1F1;
+    --hover-color: #e0dede;
+    --grey-color: #848484;
+    --bg-color: #181818;
+    --foter-color: #000000;
+    --link-color: #39A0FF;
+
+    --behance-clr: #0057FF;
+    --discord-clr: #5865F2;
+    --youtube-clr: #FF0000;
+    --vk-clr: #0077FF;
+    --github-clr: #181818;
+    --twitch-clr: #9146FF;
+}
+
+@font-face {
+    font-family: "Azeret Mono";
+    src: url("../fonts/AzeretMono-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Azeret Mono";
+    src: url("../fonts/AzeretMono-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Azeret Mono";
+    src: url("../fonts/AzeretMono-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Azeret Mono";
+    src: url("../fonts/AzeretMono-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: linear-gradient(90deg, rgba(25, 25, 25, 0.8) 0.00%,rgba(23, 23, 23, 0.8) 99.00%),url('../images/main/background.png');
+
+    padding: 0;
+    margin: 0;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+button, a {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    color: var(--text-color);
+    background: 0;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.title {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+::-webkit-scrollbar {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-radius: 10rem;
+    border: 5px solid var(--bg-color);
+}
+
+.site-body {
+    padding: 100px 0;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.site-body .container {
+    display: flex;
+    flex-direction: column;
+    gap: 150px 0;
+}
+
+.intro {
+
+}
+
+.stefanlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+
+.stefanlight-title {
+    order: 1;
+}
+
+.stefanlight-logo {
+    order: 2;
+}
+
+@media (max-width:740px) {
+    .stefanlight {
+        justify-content: left;
+    }
+
+    .stefanlight-title {
+        order: 2;
+    }
+
+    .stefanlight-logo {
+        order: 1;
+    }
+}
+
+@media (max-width:470px) {
+
+    .stefanlight-title {
+        font-size: 21px;
+    }
+
+    .about-me {
+        font-size: 15px;
+    }
+
+}
+
+.about-me {
+    margin-top: 35px;
+    font-weight: 400;
+}
+
+.projects-space {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.project-card {
+    /* width: 33%; */
+
+    padding: 35px;
+    border: 1px solid var(--text-color);
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.project-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 15px;
+}
+
+.pr-button {
+    height: 40px;
+    width: 100%;
+
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .125s ease-in;
+}
+
+.pr-button:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 990px) {
+    .projects-space {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 740px) {
+    .projects-space {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    .project-btns {
+        flex-direction: column;
+    }
+}
+
+.re-space {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 20px 70px;
+}
+
+.re-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.re-card {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    padding: 0 30px;
+    border-radius: 32px;
+    border: 1px solid var(--text-color);
+
+    transition: .125s ease-in;
+}
+
+.re-card:hover {
+    opacity: .9;
+}
+
+.re__behance {
+    background-color: var(--behance-clr);
+}
+
+.re__discord {
+    background-color: var(--discord-clr);
+}
+
+.re__youtube {
+    background-color: var(--youtube-clr);
+}
+
+.re__vk {
+    background-color: var(--vk-clr);
+}
+
+.re__github {
+    background-color: var(--github-clr);
+}
+
+.re__twitch {
+    background-color: var(--twitch-clr);
+}
+
+.re-name {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media (max-width: 950px) {
+    .re-space {
+        grid-template-columns: 1fr;
+    }
+}
+
+.site-footer {
+    background-color: var(--foter-color);
+    padding: 40px 0;
+}
+
+.footer-space {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-stefan {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+}
+
+.footer-logo , .footer-logo img {
+    height: 30px;
+}
+
+.footer-nick {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.footer-name {
+   color: var(--grey-color);
+}
+
+.footer-link {
+    color: var(--link-color);
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+}
+
+.footer-list-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.footer-pos {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-a {
+    color: var(--grey-color);
+    font-size: 15px;
+    border-bottom: 1px solid var(--grey-color);
+
+    transition: .125s ease-in;
+}
+
+.footer-a:hover {
+    color: var(--hover-color);
+}
+
+.footer-authors {
+    border-bottom: 0 !important;
+}
+
+@media (max-width: 670px) {
+    .footer-space {
+        flex-direction: column;
+    }
+}
+
