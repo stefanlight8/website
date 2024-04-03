@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 :root {
     --font-size: 16px;
     --font-weight: 400;
-    --font-family: 'Azeret Mono';
+    --font-family: 'Poppins';
 
     --text-color: #F1F1F1;
     --hover-color: #e0dede;
     --grey-color: #848484;
-    --bg-color: #181818;
-    --foter-color: #000000;
+    --bg-color: #0f0e10;
+    --footer-color: #000000;
     --link-color: #39A0FF;
 
     --behance-clr: #0057FF;
@@ -19,32 +21,28 @@
 }
 
 @font-face {
-    font-family: "Azeret Mono";
-    src: url("../fonts/AzeretMono-SemiBold.ttf");
+    font-family: "Poppins";
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Azeret Mono";
-    src: url("../fonts/AzeretMono-Medium.ttf");
+    font-family: "Poppins";
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Azeret Mono";
-    src: url("../fonts/AzeretMono-Regular.ttf");
+    font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Azeret Mono";
-    src: url("../fonts/AzeretMono-Light.ttf");
+    font-family: "Poppins";
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -56,7 +54,6 @@ body {
     font-weight: var(--font-weight);
     color: var(--text-color);
     background-color: var(--bg-color);
-    background-image: linear-gradient(90deg, rgba(25, 25, 25, 0.8) 0.00%,rgba(23, 23, 23, 0.8) 99.00%),url('../images/main/background.png');
 
     padding: 0;
     margin: 0;
@@ -85,7 +82,7 @@ button, a {
 }
 
 .container {
-    max-width: 1040px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -105,7 +102,7 @@ button, a {
 }
 
 .site-body {
-    padding: 100px 0;
+    padding: 100px 50px;
 
     display: flex;
     flex-direction: column;
@@ -115,7 +112,7 @@ button, a {
 .site-body .container {
     display: flex;
     flex-direction: column;
-    gap: 150px 0;
+    gap: 100px 0;
 }
 
 .intro {
@@ -131,6 +128,7 @@ button, a {
 
 .stefanlight-title {
     order: 1;
+    font-size: 50px;
 }
 
 .stefanlight-logo {
@@ -139,7 +137,8 @@ button, a {
 
 @media (max-width:740px) {
     .stefanlight {
-        justify-content: left;
+        font-size: 25px;
+        justify-content: center;
     }
 
     .stefanlight-title {
@@ -158,21 +157,27 @@ button, a {
     }
 
     .about-me {
-        font-size: 15px;
+        font-size: 25px;
     }
 
 }
 
 .about-me {
+    font-size: 17px;
     margin-top: 35px;
     font-weight: 400;
+    text-align: justify;
+}
+
+.project-logo {
+    max-block-size: 50px;
 }
 
 .projects-space {
     margin-top: 35px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     align-items: flex-start;
     gap: 20px;
 }
@@ -182,17 +187,17 @@ button, a {
 
     padding: 35px;
     border: 1px solid var(--text-color);
-    border-radius: 30px;
+    border-radius: 15px;
 
     display: flex;
     flex-direction: column;
-    gap: 20px 0;
+    gap: 30px 0;
 }
 
 .project-title {
     display: flex;
     align-items: center;
-    gap: 0 20px;
+    gap: 0 30px;
 }
 
 .project-btns {
@@ -261,7 +266,7 @@ button, a {
     align-items: center;
     gap: 0 20px;
     padding: 0 30px;
-    border-radius: 32px;
+    border-radius: 15px;
     border: 1px solid var(--text-color);
 
     transition: .125s ease-in;
@@ -307,7 +312,7 @@ button, a {
 }
 
 .site-footer {
-    background-color: var(--foter-color);
+    background-color: var(--footer-color);
     padding: 40px 0;
 }
 
@@ -325,7 +330,7 @@ button, a {
 }
 
 .footer-logo , .footer-logo img {
-    height: 30px;
+    height: 40px;
 }
 
 .footer-nick {
