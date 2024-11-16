@@ -38,4 +38,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd frontend
-          npx gh-pages -d .svelte-kit/output/server -r https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          npx gh-pages -d .svelte-kit/output/server
