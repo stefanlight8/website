@@ -36,4 +36,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
-          npx gh-pages
+          npx gh-pages -d .svelte-kit/output/server
