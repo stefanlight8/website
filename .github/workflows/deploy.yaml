@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build the site
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Install GitHub Pages dependencies
+        run: |
+          cd frontend
+          npm install --save gh-pages
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Deploy to GitHub Pages
+        run: |
+          cd frontend
+          npx gh-pages -d .svelte-kit/output/client
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
