@@ -33,14 +33,14 @@ jobs:
           cd frontend
           npm install --save gh-pages
 
-      - name: Set up Git user
+      - name: Configure Git Credentials
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
-          npx gh-pages -d .svelte-kit/output/client -u "https://github.com/${GITHUB_REPOSITORY}.git"
+          npx gh-pages -d .svelte-kit/output/client
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
