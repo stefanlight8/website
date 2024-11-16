@@ -48,9 +48,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
       
     steps:
-      - name: Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd frontend
-          npx gh-pages -d .svelte-kit/output/server
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v2
