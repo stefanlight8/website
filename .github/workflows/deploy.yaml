@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # this should match the `pages` adapter-static option. It default to 'build'
-          path: 'build/'
+          path: 'frontend/build/'
 
   deploy:
     needs: build
