@@ -18,17 +18,22 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Move to frontend directory
-        run: cd frontend
-
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd frontend
+          npm install
 
       - name: Build the site
-        run: npm run build
+        run: |
+          cd frontend
+          npm run build
 
       - name: Install GitHub Pages dependencies
-        run: npm install --save gh-pages
+        run: |
+          cd frontend
+          npm install --save gh-pages
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages
+        run: |
+          cd frontend
+          npx gh-pages
