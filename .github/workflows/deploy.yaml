@@ -34,13 +34,13 @@ jobs:
         run: |
           cd frontend
           npm run build
-          ls .svelte-kit/output/client
+          ls src
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
         with:
           # this should match the `pages` adapter-static option. It default to 'build'
-          path: 'frontend/.svelte-kit/output/client/'
+          path: 'static'
 
   deploy:
     needs: build

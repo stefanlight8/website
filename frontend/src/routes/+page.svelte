@@ -26,10 +26,10 @@
     <img src="/logo.svg" alt="Logotype" class="logo" />
     <div class="links">
         <a href="/" class="current-page">Home</a>
-        <a href="/biography">Biography</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/blog">Blog</a>
-        <a href="/contacts">Contacts</a>
+        <a href="#">Biography</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacts</a>
     </div>
     <div class="time">
         {currentTime}
@@ -50,5 +50,5 @@
             <p class="description">{post.description}</p>
         </article>
     {/each}
-    <a class="more_posts_link" href="/blog">more...</a>
+    <a class="more_posts_link" href="#">more...</a>
 </div>
