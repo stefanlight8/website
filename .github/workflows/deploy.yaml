@@ -32,6 +32,8 @@ jobs:
 
       - name: Build the site
         run: |
+          ls
+          ls frontend
           cd frontend
           npm run build
 
