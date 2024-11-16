@@ -35,6 +35,12 @@ jobs:
           cd frontend
           npm run build
 
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # this should match the `pages` adapter-static option. It default to 'build'
+          path: 'build/'
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
