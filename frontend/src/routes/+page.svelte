@@ -23,7 +23,7 @@
 </script>
 
 <div class="navbar">
-    <img src="/logo.svg" alt="Logotype" class="logo" />
+    <img src="logo.svg" alt="Logotype" class="logo" />
     <div class="links">
         <a href="/" class="current-page">Home</a>
         <a href="#">Biography</a>
