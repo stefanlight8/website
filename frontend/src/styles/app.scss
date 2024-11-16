@@ -1,0 +1,129 @@
+$primary-colour: #ffffff;
+$secondary-colour: #939393;
+$background-colour: #0d0d0d;
+$font-primary: "Inter", sans-serif;
+$font-secondary: "Archivo", sans-serif;
+$gap-default: 6rem;
+$gap-mobile: 2rem;
+$margin-default: 3% 25%;
+$margin-mobile: 2%;
+$max-width: 768px;
+
+body {
+    background: $background-colour;
+    font-family: $font-primary;
+    color: $primary-colour;
+    display: grid;
+    gap: $gap-default;
+    margin: $margin-default;
+
+    @media only screen and (max-width: $max-width) {
+        gap: $gap-mobile;
+        margin: $margin-mobile;
+    }
+}
+
+.logo {
+    max-width: 35px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $max-width) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links {
+        display: flex;
+        gap: 1.5rem;
+
+        @media only screen and (max-width: $max-width) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        a {
+            font-weight: 300;
+            font-size: 20px;
+            color: $secondary-colour;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+                color: $primary-colour;
+            }
+
+            &.current-page {
+                color: $primary-colour;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .time {
+        font-weight: 300;
+        font-size: 20px;
+        color: $secondary-colour;
+        margin-left: auto;
+    }
+}
+
+h1,
+h2 {
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 32px;
+
+    @media only screen and (max-width: $max-width) {
+        font-size: 25px;
+    }
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 20px;
+    color: $secondary-colour;
+}
+
+.post {
+    padding: 5px 20px;
+    border: 1px solid #2d2d2d;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.post .title {
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 22px;
+}
+.post .timestamp {
+    font-weight: 300;
+    font-size: 16px;
+    color: $secondary-colour;
+}
+.post .description {
+    font-weight: 200;
+    font-size: 18px;
+
+    @media only screen and (max-width: $max-width) {
+        font-size: 16px;
+    }
+}
+
+.more_posts_link {
+    display: grid;
+    text-align: center;
+    text-decoration: none;
+    color: $secondary-colour;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $primary-colour;
+    }
+}
