@@ -34,7 +34,8 @@ jobs:
           npm run build
 
       - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd frontend
-
-          npx gh-pages -d .svelte-kit/output/server
+          npx gh-pages -d .svelte-kit/output/server -r https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
