@@ -2,45 +2,47 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: "main"
 
 jobs:
-  build:
+  build_site:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: |
-          cd frontend
-          npm install
+        run: npm install
 
-      - name: Build the site
-        run: |
-          cd frontend
-          npm run build
-
-      - name: Install GitHub Pages dependencies
-        run: |
-          cd frontend
-          npm install --save gh-pages
-
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-
-      - name: Deploy to GitHub Pages
-        run: |
-          cd frontend
-          npx gh-pages -d .svelte-kit/output/client
+      - name: build
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_PATH: "/${{ github.event.repository.name }}"
+        run: |
+          npm run build
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "build/"
+
+  deploy:
+    needs: build_site
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
