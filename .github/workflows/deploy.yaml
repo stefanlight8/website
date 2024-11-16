@@ -2,47 +2,33 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: "main"
+    branches:
+      - main
 
 jobs:
-  build_site:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: "20"
+
+      - name: Move to frontend directory
+        run: cd frontend
 
       - name: Install dependencies
         run: npm install
 
-      - name: build
-        env:
-          BASE_PATH: "/frontend"
-        run: |
-          npm run build
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "build/"
+      - name: Build the site
+        run: npm run build
 
-  deploy:
-    needs: build_site
-    runs-on: ubuntu-latest
+      - name: Install GitHub Pages dependencies
+        run: npm install --save gh-pages
 
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages
