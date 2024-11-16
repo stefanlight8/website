@@ -29,8 +29,10 @@ jobs:
           npm run build
 
       - name: Install GitHub Pages dependencies
-        run: npm install --save gh-pages
-      
+        run: |
+          cd frontend
+          npm install --save gh-pages
+
       - name: Set up Git user
         run: |
           git config --global user.name "github-actions"
@@ -39,6 +41,6 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
-          npx gh-pages -d .svelte-kit/output/client
+          npx gh-pages -d .svelte-kit/output/client -u "https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
