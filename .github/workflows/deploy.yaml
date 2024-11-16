@@ -30,6 +30,11 @@ jobs:
 
       - name: Install GitHub Pages dependencies
         run: npm install --save gh-pages
+      
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
 
       - name: Deploy to GitHub Pages
         run: |
