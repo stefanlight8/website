@@ -34,6 +34,6 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
-          npm run deploy
+          npx gh-pages -d build
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
