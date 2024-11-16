@@ -14,8 +14,8 @@ jobs:
 
       - name: Configure Git Credentials
         run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config user.name stefanlight8
+          git config user.email 64615032+stefanlight8@users.noreply.github.com
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
