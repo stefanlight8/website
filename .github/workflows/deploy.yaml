@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - patch-1
 
 jobs:
   build:
@@ -13,11 +12,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Configure Git Credentials
-        run: |
-          git config --global user.name "stefanlight8"
-          git config --global user.email "64615032+stefanlight8@users.noreply.github.com"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -34,7 +28,6 @@ jobs:
         run: |
           cd frontend
           npm run build
-          ls src
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
